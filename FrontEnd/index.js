@@ -164,11 +164,3 @@ butunapart.addEventListener("click", () =>{
 
 
 
-const identification = ["sophie.bluel@test.tld", "S0phie"]
-const email = document.getElementById("email")
-const password = document.getElementById("password")
-
-
-while ( email !== identification[0]){
-    email.style.background =" green"
-}
