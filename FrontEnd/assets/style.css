@@ -255,3 +255,17 @@ li a:hover{
 	cursor: pointer;
 }
 
+.editor{
+	background-color: black;
+	color: white;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+
+.p-editor{
+	text-align: center;
+	padding-top: 15px;
+}

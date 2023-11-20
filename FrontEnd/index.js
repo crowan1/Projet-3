@@ -1,3 +1,4 @@
+
 async function init () {
     const local = await fetch ('http://localhost:5678/api/works')
     const objets = await local.json()
@@ -23,7 +24,7 @@ async function init () {
 }
 init ()
 
-async function button() {
+async function button() { 
     const local = await fetch('http://localhost:5678/api/works');
     const objets = await local.json();
 
@@ -33,11 +34,10 @@ async function button() {
     const buttunresto = document.querySelector(".buttunresto");
     const allbutton = document.querySelectorAll("button")
 
+
    buttontout.addEventListener("click", function () {
         displayImages(objets); 
     });
-
-
 
     buttunobjets.addEventListener("click", function () {
         const piecesOrdonnees = objets.filter(function (pieces) {

@@ -50,3 +50,9 @@ button{
 .tableaulog{
 	margin: 150px 0 ;
 }
+
+.msg-eror{
+	text-align: center;
+	color: red;
+	display: none;
+}

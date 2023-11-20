@@ -27,27 +27,33 @@
 			</ul>
 		</nav>
 	</header>
-	<main id="ancrecontact">
+
+	<main id="log-in">
 		<section class="tableaulog" ">
+			<div id="msg-eror">
+					<h4>
+				Erreur dans l’identifiant ou le mot de passe
+			</h4>
+			</div>
+		
 			<h3>Log in</h3>
 			<br><br>
-			<form action="#" method="post" id="formulairelogin">
+			<form action="#" method="post" id="form-login" method="post">
 
 				<label for="email">E-mail</label><br>
-				<input type="text" name="email" id="email">
+				<input type="text" name="email" id="email" required>
 				<br>
 				<label for="password"> Mot de passe</label><br>
-				<input type="text" name="password" id="password">
+				<input type="text" name="password" id="password" required>
 
 
 				<br>
-				<input type="submit" name="submitbutton" id="submitbutton" value="Se connecter">
+				<input type="submit" name="submit-form" id="submit-form" value="Se connecter">
 				<br>
 				<button> Mot de passe oublié</button>
 
 
 			</form>
-
 		</section>
 	</main>
 
@@ -58,6 +64,9 @@
 			</ul>
 		</nav>
 	</footer>
+	<script src="function.js"></script>
+	<script src="login.js"></script>
+
 </body>
 
 </html>
