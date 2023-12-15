@@ -1,6 +1,6 @@
 
-const messageError = document.getElementById("msg-eror");
-const loginURL = fetch ("http://localhost:5678/api/users/login");
+const messageError = document.querySelector("h4");
+const loginURL = "http://localhost:5678/api/users/login";
 
 
 const form = document.forms["form-login"]; 

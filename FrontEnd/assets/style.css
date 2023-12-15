@@ -57,7 +57,7 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px ;
 }
 section {
 	margin: 50px 0
@@ -268,4 +268,77 @@ li a:hover{
 .p-editor{
 	text-align: center;
 	padding-top: 15px;
+}
+
+
+.mode-edition {
+	font-family: 'Work Sans';
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: black;
+	gap: 20px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo-edition {
+	display: flex;
+	flex-direction: row;
+	color: #FFFFFF;
+	font-size: 16px;
+	gap: 10px;
+}
+
+#changements {
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	padding: 11px 23px;
+	border-radius: 60px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.modifier {
+	display: none;
+	cursor: pointer;
+	color: black;
+	flex-direction: row;
+	gap: 8px;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding-bottom: 3px;
+}
+
+article {
+	padding-bottom: 80px;
+}
+
+.projets-modifier {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+}
+figure .modifier {
+	padding-left: 60px;
+	padding-top: 17px;
+}
+
+.style-editor{
+	height: 75px;
+	background: black;
+	color: white;
+	display: none;
 }
