@@ -2,6 +2,7 @@ const editor = document.querySelector(".style-editor");
 const editor1 = document.querySelector(".editor-logo")
 const editBtn = document.querySelectorAll(".modifier");
 const logout = document.querySelector('[href="login.html"]');
+const lienModfier = document.getElementById("lienModifier")
 
 
 
@@ -12,6 +13,7 @@ if (isConnected()) {
     editor.style.left ="0"
     editor.style.width = " 100%"
     editor1.style.margin ="auto"
+    lienModfier.style.display="flex"
 
 
     const logo = document.getElementById("logo");
@@ -32,5 +34,12 @@ if (isConnected()) {
         localStorage.removeItem("userId");
         localStorage.removeItem("auth");
         window.location.reload();
+
+    
+
+        
+    
+
     });
 }
+

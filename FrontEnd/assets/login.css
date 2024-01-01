@@ -53,4 +53,7 @@ button{
 
 h4{
 	display: none;
+	justify-content: center;
+	color: red;
 }
+
