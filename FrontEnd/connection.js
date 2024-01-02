@@ -34,10 +34,6 @@ if (isConnected()) {
         localStorage.removeItem("userId");
         localStorage.removeItem("auth");
         window.location.reload();
-
-    
-
-        
     
 
     });

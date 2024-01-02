@@ -98,12 +98,83 @@
 	</nav>
 </footer>
 
+<!-- partie admin -->
+<section id="PageAdmin">
+
+<!-- galerie photo -->
+	<div id="GaleriePhoto">
+		<div class="fermer" id="fermer-suppr">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+
+		<h2>Galerie photo</h2>
+		<div id="alert" class="alert alert-success" role="alert">
+		</div>
+		<div class="gallerymodal">
+
+
+		</div>
+
+		<hr>
+
+		<input type="submit" value="Ajouter une photo" id="AjoutPhoto">
+	</div>
+
+	<!-- ajout Photo-->
+	<div id="modalsAjout">
+		<nav class="navModal">
+			<div class="precedent">
+				<i class="fa-solid fa-arrow-left-long"></i>
+			</div>
+			<div class="fermer" id="fermer-ajout">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+		</nav>
+
+		<div class="AjoutImageContainer">
+			<h2>Ajout photo</h2>
+
+			<form id="ajout-form" method="post" enctype="multipart/form-data">
+				<div class="AjoutPhotoContainer">
+
+					<div id="previewImage">
+					</div>
+
+					<div id="previewdetails">
+						<i class="fa-regular fa-image"></i>
+						<label for="imageUpload" id="btnImage">+ Ajouter photo</label>
+						<input type="file" accept=".png, .jpg, .jpeg" id="imageUpload">
+						<span>jpg, png : 4mo max</span>
+					</div>
+				</div>
+
+			<!-- Ajout classe image -->
+			<div class="AjoutDetail">
+				<label>Titre</label>
+				<input type="text" name="titre" id="titreAjout" required>
+				<label>Catégorie</label>
+				<select name="categorie" id="selectCategorie" required>
+					<option value="1">Objets</option>
+					<option value="2">Appartements</option>
+					<option value="3">Hotels & restaurants</option>
+				</select>
+			</div>
+
+			<hr>
+
+			<input type="submit" value="Valider" id="validerAjout">
+			
+			</form>
+		</div>
+
+	</div>
+</section>
 
 
 
 <script src="function.js"></script>
 <script src="index.js"></script>
 <script src="connection.js"></script>
-<script src="modal.js"></script>
+<script src="admin.js"></script>
 </body>
 </html>
