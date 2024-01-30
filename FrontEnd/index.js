@@ -186,6 +186,7 @@ function addWorkModal() {
     i.setAttribute("onclick", "deleteWork(this, " + work.id + ")");
     div.appendChild(i);
 
+
     const p = document.createElement('p');
     p.textContent = 'éditer';
     p.setAttribute("data-id", work.id);
@@ -196,3 +197,5 @@ function addWorkModal() {
   
     galleryModal.appendChild(fragment);
 }
+
+

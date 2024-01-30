@@ -367,7 +367,25 @@ figure .modifier {
 
 #lienModifier{
 	display: none;
+	margin-left: 20px;
 }
+
+#logo{
+	margin-bottom: 25Px;
+}
+
+
+#iconeDelete{
+	position: relative;
+	width: 10px;
+	top: -92px;
+	left: 37px;
+	max-width: 60px;
+	max-height: 80px;
+}
+
+
+
 
 
 
@@ -456,19 +474,35 @@ figure .modifier {
 	flex-direction: column;
 }
 
+.TitleGalerie{
+	text-align: center;
+}
+
+.GalerieImage img {
+	object-fit: cover;
+	width: 60px;
+}
+
+.GalerieImage{
+	width: 100%;
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns:  repeat(5, 1fr);;
+}
+
 .AjoutImageContainer h2 {
 	padding-bottom: 30px;
 	padding-top: 20px;
 }
 
-#GaleriePhoto, #modalsAjout {
+#GalerieIMG, #AdminAjout {
 	display: none;
 	border-radius: 10px;
 	background-color: #FFFFFF;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #818181;
-	width: 50%;
+	width: 25%;
 	height: auto;
 	flex-direction: column;
 }
@@ -488,22 +522,23 @@ figure .modifier {
 	font-weight: 400;
 }
 
-#AjoutPhoto, #validerAjout, #supprgalerie {
+#AjoutPhoto, #validerAjout {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: 'Syne';
+	border: none;
 }
 
 #validerAjout {
-	background-color: #A7A7A7;
+	background-color: #1D6154;
 }
 
 hr {
 	background-color: black;
 	height: 0.5px;
 	width: 80%;
-	margin-top: 45px;
+	margin-top: 10px;
 }
 
 #supprgalerie {
@@ -549,14 +584,13 @@ figcaption {
 	color: white;
 	padding: 4px;
 	border-radius: 2px;
-	position: absolute;
   	cursor: pointer;
 	top: 0;
 	right: 0px;
 }
 
 
-.navModal {
+.NavigationModal {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
