@@ -80,8 +80,12 @@ async function sendWorkData(data) {
         },
         body: data,
     });
-
+    init1()
+    init()
+    
     return response.json();
+   
+   
 }
 
 
@@ -111,18 +115,27 @@ async function handleFormSubmit(event) {
 // confirmation ajout d'image
     try {
         const response = await sendWorkData(formData);
+       
         console.log(response);
         
         const alert = document.getElementById('alert');
         alert.innerHTML = "Votre photo a été ajouté avec succès";
         alert.style.display = "block";
         setTimeout(function(){ alert.style.display = "none"; }, 5000);
+ 
         
     } catch (error) {
         console.error("Erreur :", error);
     }
 }
 
+
+submitProjet.addEventListener("click", ()=>{
+    closeAddWorkModal()
+    OpenGAllerieAdmin()
+    init1()
+
+})
 
 uploadImageInput.addEventListener("change", function () {
     uploadImage();
@@ -152,50 +165,46 @@ function uploadImage() {
 }
 
 // galerie photo
-
 async function init1 () {
     const local = await fetch ('http://localhost:5678/api/works')
     const objets = await local.json()
 
+    const sectionsfiches = document.querySelector(".GalerieImage");
+    sectionsfiches.innerHTML = ""; // Supprimer les images existantes avant d'ajouter de nouvelles
 
-    for (let i =0; i <objets.length;i++){
-            const images = objets[i]
+    for (let i = 0; i < objets.length; i++){
+        const images = objets[i]
 
-            const pieceElement = document.createElement("div")
+        const pieceElement = document.createElement("div")
+        pieceElement.style.width ="60px"
+        pieceElement.style.height ="117px"
 
-          const imageselement = document.createElement("img")
-    imageselement.src = images.imageUrl
+        const imageselement = document.createElement("img")
+        imageselement.src = images.imageUrl
 
-    const titleelemnt = document.createElement("p")
-    titleelemnt.innerText = images.title
+        const titleelemnt = document.createElement("p")
+        titleelemnt.innerText = images.title
 
+        const IconeElement = document.createElement("i");
+        IconeElement.className = "fa-solid fa-trash iconeDelete";
+        IconeElement.id = ("iconeDelete")
+        IconeElement.setAttribute("data-id", images.id); 
 
- 
-    const IconeElement = document.createElement("i");
-IconeElement.className = "fa-solid fa-trash iconeDelete";
-    IconeElement.id = ("iconeDelete")
-IconeElement.setAttribute("data-id", images.id); 
-    
-    const sectionsfiches = document.querySelector(".GalerieImage")
-    sectionsfiches.appendChild(pieceElement)
-    pieceElement.appendChild(imageselement)
-    pieceElement.appendChild(titleelemnt)
-    pieceElement.appendChild(IconeElement)
+        sectionsfiches.appendChild(pieceElement)
+        pieceElement.appendChild(IconeElement)
+        pieceElement.appendChild(imageselement)
+        pieceElement.appendChild(titleelemnt)
 
-
-
-
-
-    titleelemnt.style.display ="none"
-    imageselement.style.marginBottom ="15Px"
-    pieceElement.style.width="60px"
-
-    
- }
+        titleelemnt.style.display ="none"
+        imageselement.style.marginBottom ="15Px"
+        pieceElement.style.width="60px"
+    }
 }
-init1 ()
+init1()
 
 
+
+//Partie pour supprimer une image 
 
 
 async function deleteImage(imageId) {
@@ -213,8 +222,8 @@ async function deleteImage(imageId) {
 
         if (response.ok) {
             console.log(`L'image avec l'ID ${imageId} a été supprimée avec succès.`);
-    
-            init1();
+        
+       
         } else {
             console.error(`La suppression de l'image avec l'ID ${imageId} a échoué.`, response.status);
         }
@@ -232,9 +241,15 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target.classList.contains("iconeDelete")) {
         
             const imageId = event.target.getAttribute("data-id");
-
+          
            
             deleteImage(imageId);
+            init()
+            return init1 ()
+            
+            
+          
         }
     });
 });
+
