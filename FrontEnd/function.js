@@ -9,3 +9,5 @@ function getAuthorization() {
     const connecting = getAuthorization() ? true : false;
     return connecting;
   }
+
+  //faille de secruite, expiration de temps 
